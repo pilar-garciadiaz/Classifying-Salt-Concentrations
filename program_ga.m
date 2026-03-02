@@ -7,7 +7,7 @@ path_datos      = 'C:/.../Data/';
 path_resultados = 'C:/.../Results/';
 
 
-rng(2026);                       % Reproducible seed
+rng(260101);                       % Reproducible seed
 
 time_limit_minutes = 30;         % Time limit per execution
 time_limit_seconds = time_limit_minutes*60;
@@ -623,4 +623,5 @@ function ind = mutate_individual(ind, G, Pm)
     if any(mut_mask)
         ind(mut_mask) = randi([0 G], [1, sum(mut_mask)]);
     end
+
 end
